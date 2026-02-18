@@ -76,7 +76,6 @@ console.log(x - y);
 console.log(x * y);
 console.log(x / y);
 console.log(x % y);
-console.log(xy);
 
 // 7️⃣ Declare a variable with value 10. Apply:
 
