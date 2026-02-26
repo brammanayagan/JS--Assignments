@@ -8,4 +8,27 @@ for (let i = 0; i < array1.length; i++) {
   }
 }
 
-// day 02 array
+// day 02 for loop
+
+for (let i = 0; i < 3; i++) {
+  setTimeout(function () {
+    console.log(i);
+  }, 2000);
+}
+
+// day 03 for loop
+
+let arr = [866, 32548, 54, 66, 915, 18];
+
+function findSmallestNumber() {
+  let smallNum = arr[0];
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] < smallNum) {
+      smallNum = arr[i];
+    }
+  }
+  return smallNum;
+}
+
+console.log(findSmallestNumber([866, 32548, 54, 66, 915, 18]));
