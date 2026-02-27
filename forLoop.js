@@ -32,3 +32,17 @@ function findSmallestNumber() {
 }
 
 console.log(findSmallestNumber([866, 32548, 54, 66, 915, 18]));
+
+// day 04 for loop
+
+function secondLargest() {
+  let largestNum = arr[0];
+  let secondLargest = arr[1];
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > largestNum && secondLargest) {
+      largestNum = arr[i];
+    }
+  }
+  return;
+}

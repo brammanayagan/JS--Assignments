@@ -41,3 +41,19 @@ const aFunction = () => {
 a = 3333;
 
 console.log(a);
+
+////////////////////////////////            promise         /////////////////////////////////////////////////////
+
+const myFetch = new Promise((resolve, reject) => {
+  const res = fetch("https://jsonplaceholder.typicode.com/todos/1");
+
+  if (res) {
+    resolve(res);
+  } else {
+    reject(error);
+  }
+});
+
+myFetch.then((resolve) => console.log("fetch ", resolve));
+
+console.log("myFetch", myFetch);
