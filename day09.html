@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+  <head>
+    <title>JS Mini Projects</title>
+    <style>
+      body {
+        font-family: Arial;
+        padding: 20px;
+      }
+
+      .error {
+        color: red;
+      }
+
+      .success {
+        color: green;
+      }
+
+      li {
+        margin: 5px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Counter</h2>
+    <h3 id="count">0</h3>
+    <button onclick="increase()">Increase</button>
+    <button onclick="decrease()">Decrease</button>
+    <button onclick="resetCount()">Reset</button>
+
+    <hr />
+
+    <h2>Add Item to List</h2>
+    <input type="text" id="itemInput" placeholder="Enter item" />
+    <button onclick="addItem()">Add Item</button>
+
+    <ul id="itemList"></ul>
+
+    <hr />
+
+    <h2>Change Background Color</h2>
+    <button onclick="toggleColor()">Toggle Background</button>
+
+    <!-- ///////////////////////////////////////////////////////////////////// -->
+
+    <script>
+      let count = 0;
+      const countDisplay = document.getElementById("count");
+
+      function increase() {
+        count++;
+        countDisplay.textContent = count;
+      }
+
+      function decrease() {
+        count--;
+        countDisplay.textContent = count;
+      }
+
+      function resetCount() {
+        count = 0;
+        countDisplay.textContent = count;
+      }
+
+      /////////////////////////////////////////////////////////////////////
+      function addItem() {
+        const input = document.getElementById("itemInput");
+        const value = input.value.trim();
+
+        if (value === "") return;
+
+        const li = document.createElement("li");
+        li.textContent = value;
+      }
+
+      /////////////////////////////////////////////////////////////////////
+      let isDark = false;
+
+      function toggleColor() {
+        if (!isDark) {
+          document.body.style.backgroundColor = "lightcyan";
+          isDark = true;
+        } else {
+          document.body.style.backgroundColor = "white";
+          isDark = false;
+        }
+      }
+    </script>
+  </body>
+</html>

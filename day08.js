@@ -1,72 +1,59 @@
-// Square
-function square(n) {
-  for (let i = 0; i < n; i++) {
-    let row = "";
-    for (let j = 0; j < n; j++) {
-      row += "* ";
-    }
-    console.log(row);
-  }
-}
+// // Square
 
-console.log("Square Output:");
-square(4);
+// function square(n) {
+//   for (let i = 1; i <= n; i++) {
+//     let row = "";
+//     for (let j = 1; j <= n; j++) {
+//       row += "* ";
+//     }
+//     console.log(row);
+//   }
+// }
 
-// Rectangle
-function rectangle(rows, cols) {
-  for (let i = 0; i < rows; i++) {
-    let row = "";
-    for (let j = 0; j < cols; j++) {
-      row += "* ";
-    }
-    console.log(row);
-  }
-}
+// square(3);
+// // console.log(square(4));
 
-console.log("Rectangle Output:");
-rectangle(3, 5);
+// // Rectangle
 
-// Right Triangle
-function rightTriangle(n) {
+// function rectangle(rows, cols) {
+//   for (let i = 1; i <= rows; i++) {
+//     let result = "";
+//     for (let j = 1; j <= cols; j++) {
+//       result += "* ";
+//     }
+//     console.log(result);
+//   }
+// }
+
+// rectangle(9, 16);
+
+// Right triangle
+
+function triangle(n) {
   for (let i = 1; i <= n; i++) {
-    let row = "";
+    let tri = "";
     for (let j = 1; j <= i; j++) {
-      row += "* ";
+      tri += "* ";
     }
-    console.log(row);
+    console.log(tri);
   }
 }
 
-console.log("Right Triangle Output:");
-rightTriangle(4);
+triangle(6);
 
 // Left Triangle
+
 function leftTriangle(n) {
   for (let i = 1; i <= n; i++) {
-    let row = "";
+    let left = "";
     for (let space = 1; space <= n - i; space++) {
-      row += "  ";
+      left += "  ";
     }
     for (let star = 1; star <= i; star++) {
-      row += "* ";
+      left += "* ";
     }
-    console.log(row);
+    console.log(left);
   }
 }
 
-console.log("Left Triangle Output:");
-leftTriangle(4);
-
-// Inverted Triangle
-function invertedTriangle(n) {
-  for (let i = n; i >= 1; i--) {
-    let row = "";
-    for (let j = 1; j <= i; j++) {
-      row += "* ";
-    }
-    console.log(row);
-  }
-}
-
-console.log("Inverted Triangle Output:");
-invertedTriangle(4);
+leftTriangle(7);
